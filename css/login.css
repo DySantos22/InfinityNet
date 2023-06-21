@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+}
+
+#div_form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+form{
+    width: 30rem;
+    height: 15rem;
+}
+
+#paragrafo>p{
+    margin-right: 22rem;
+    font-size: 14px;
+    margin-bottom: 1.5rem;
+    font-family: 'Sawarabi Mincho', serif;
+}
+
+.col-md-10{
+    margin: -1rem 0 1.5rem 2.5rem;
+    border-radius: 1rem;
+}
+input[type="email"],input[type="password"]{
+    font-size: 16px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+input[type="email"]:focus,input[type="password"]:focus{
+    box-shadow: none !important;
+    border: 1px solid gray;
+}
+
+#link_esqueceu{
+    margin-right: 14.5rem;
+    margin-top: -1rem;
+    font-size: 13px;
+}
+
+#esqueci_senha{
+    color: gray;
+    font-size: 12px;
+    text-decoration: none;
+    font-family: 'Sawarabi Mincho', serif;
+}
+
+#input_button{
+    margin-right: 20rem;
+    margin-top: 1rem;
+}
+#input_row{
+    display: flex;
+}
+#submit{
+    background: #006465;
+    color:#fff;
+    width: 8rem;
+    height: 3rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    font-size: 16px;
+    font-family: 'Sawarabi Mincho', serif;
+}
+#cadastrar{
+    margin-left: -29rem;
+    width: 8rem;
+    height: 3rem;
+    border: none;
+    background-color: #fff;
+    font-size: 16px;
+    font-family: 'Sawarabi Mincho', serif;
+}
+
+@media only screen and (max-width: 768px) {
+    #div_form {
+        width: 80%; /* Reduz a largura do formulário para telas menores */
+    }
+
+    form {
+        width: 100%; /* Define a largura do formulário como 100% */
+    }
+
+    #paragrafo > p {
+        margin-right: 0; /* Remove a margem direita para melhorar a aparência em dispositivos menores */
+        text-align: center; /* Centraliza o parágrafo */
+    }
+
+    .col-md-10 {
+        margin: 0 0 1.5rem; /* Ajusta a margem para ficar alinhado corretamente */
+    }
+
+    #link_esqueceu {
+        margin-right: 0; /* Remove a margem direita para melhorar a aparência em dispositivos menores */
+        text-align: center; /* Centraliza o link "Esqueci minha senha" */
+    }
+
+    #input_row {
+        flex-direction: column; /* Altera a direção dos elementos para exibição vertical */
+    }
+
+    #input_button {
+        margin-right: 0; /* Remove a margem direita para melhorar a aparência em dispositivos menores */
+        margin-top: 1rem;
+        text-align: center; /* Centraliza os botões */
+    }
+
+    #cadastrar {
+        margin-left: 0; /* Remove a margem esquerda para melhorar a aparência em dispositivos menores */
+        margin-top: 1rem;
+    }
+}

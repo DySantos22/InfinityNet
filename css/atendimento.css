@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    font-family: 'Sawarabi Mincho', serif;
+}
+
+#div_form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+form{
+    width: 50rem;
+    height: 20rem;
+}
+
+input[type="text"]:focus,input[type="email"]:focus,textarea:focus{
+    box-shadow: none !important;
+    border: 1px solid gray !important;
+}
+
+#submit{
+    background: #006465;
+    color:#fff;
+    width: 8rem;
+    height: 3rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    font-size: 16px;
+}
+
+textarea{
+    resize: none;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+    #div_form {
+        width: 90%; /* Reduza a largura do formulário para melhor se adequar a telas menores */
+        height: auto; /* Permita que a altura do formulário seja ajustada automaticamente */
+        margin-top: 2rem;
+    }
+    form {
+        width: 100%; /* Ajuste a largura do formulário para preencher a largura disponível */
+        height: auto; /* Permita que a altura do formulário seja ajustada automaticamente */
+    }
+
+}

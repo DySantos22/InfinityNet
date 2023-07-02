@@ -40,14 +40,14 @@
     <main>
         <div class="container">
             <div id="div_form">
-                <form name="form_atendimento" id="form_atendimento" action="recuperar.php" method="POST">
+                <form name="form_recuperar" id="form_recuperar" action="recuperar.php" method="POST">
                     <div class="text-center">
                         <h3>Esqueceu sua senha??</h3>
                     </div>
-                    <div class="row mb-3 text-center justify-content-center">
-                        <label for="inputEmail3" class="col-sm-2 col-form-label">Digite seu email:</label>
-                        <div class="col-sm-5">
-                            <input type="email" class="form-control" id="inputEmail3" minlength="11" maxlength="60" required>
+                    <div class="row mb-5 text-center justify-content-center">
+                        <div class="col-sm-5 form-floating">
+                            <input type="email" class="form-control" name="email" id="floatingInput" placeholder="Digite seu email" minlength="11" maxlength="60" autocomplete="off" required>
+                            <label for="floatingInput">Digite seu email</label>
                         </div>
                     </div>
                     <div id="input-submit">
@@ -58,7 +58,8 @@
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
-</script>
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+    </script>
 </body>
+
 </html>

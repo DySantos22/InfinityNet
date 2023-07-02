@@ -19,6 +19,10 @@
     margin-top: 3rem;
 }
 
+label{
+    margin-left: 1rem;
+}
+
 #submit{
     background: #006465;
     color:#fff;

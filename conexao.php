@@ -1,18 +1,15 @@
 <?php
+// Parâmetros para criar a conexão
+$server = "localhost";
+$username = "root";
+$password = "";
+$dbname = "provedora";
 
-define('HOST', 'localhost');
-define('DBNAME', 'provedora');
-define('USERNAME', 'root');
-define('PASSWORD', ' ');
+// Criando a conexão
+$conn = new mysqli($server, $username, $password, $dbname);
 
-try{
-    $conn = new PDO('mysql:host='.HOST.';dbname='.DBNAME.';user='.USERNAME.';password='.PASSWORD);
-}catch (PDOException $e){
-    echo 'Erro na conexão:'.$e->getMessage();
+// Checando a conexão
+if ($conn->connect_error) {
+  die("Você se deu mal: " . $conn->connect_error);
 }
-
-$conn = NULL;
-
-
-
 ?>

@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#div_form{
+    justify-content: center;
+    display: flex;
+    margin-top: 8rem;   
+}
+
+h3{
+    margin-bottom: 1rem;
+    font-family: 'Sawarabi Mincho', serif;  
+}
+
+.col-mb-5{
+    width: 20rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+label{
+    font-size:16px;
+}
+
+#submit{
+    background: #006465;
+    color:#fff;
+    width: 8rem;
+    height: 3rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    font-family: 'Sawarabi Mincho', serif;  
+}
+
+input[type=password]:focus{
+    box-shadow: none !important;
+    border: 1px solid gray;
+}
+
+.navbar{
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    height: 4.6rem !important;
+}

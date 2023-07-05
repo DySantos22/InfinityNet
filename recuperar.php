@@ -37,15 +37,15 @@ if($result->num_rows > 0){
 
     try{
         $mail->isSMTP();      
-    $mail->SMTPSecure = 'tls';                                  //Enviar usando TLS
-    $mail->Host       = 'smtp.gmail.com';                     //Servidor usado
-    $mail->SMTPAuth   = true;                                   //Ativando autenticacao SMTP
-    $mail->Username   = 'testeprojeto40@gmail.com';                     //Usuario SMTP
-    $mail->Password   = 'mzacqpqnulwnuyrr';                               //Senha SMTP     
-    $mail->Port       = 587;        //Porta usada para TLS
+        $mail->SMTPSecure = 'tls';                                  //Enviar usando TLS
+        $mail->Host       = 'smtp.gmail.com';                     //Servidor usado
+        $mail->SMTPAuth   = true;                                   //Ativando autenticacao SMTP
+        $mail->Username   = 'testeprojeto40@gmail.com';                     //Usuario SMTP
+        $mail->Password   = '';                               //Senha SMTP     
+        $mail->Port       = 587;        //Porta usada para TLS
 
     //Aqui ele tira o erro do SSL e da conexão com o Host
-    $mail->SMTPOptions = array(
+        $mail->SMTPOptions = array(
     'ssl' => array(
     'verify_peer' => false,
     'verify_peer_name' => false,
@@ -54,14 +54,14 @@ if($result->num_rows > 0){
     );
     
     //quem envia e recebe
-    $mail->setFrom('testeprojeto40@gmail.com');  //Usuario SMTP e Nome aleatório
-    $mail->addAddress($email);     //Email do Destinatario
-    $mail->isHTML(true);                                  //Habilitando o uso do HTML
-    $mail->charset = 'UTF-8';
-    $mail->Subject = "Redefinir Senha";    //Titulo
-    $mail->Body    = "Olá!<br><br>Caso queira redefinir sua senha, <a href='http://localhost/recuperando.html?email=$email' target='_blank'>Clique aqui!</a><br><br>Caso não queira, desconsidere este email.";
-    $mail->AltBody =  "Olá!<br><br>Caso queira redefinir sua senha, <a href='http://localhost/recuperando.html?email=$email' target='_blank'>Clique aqui!</a><br><br>Caso não queira, desconsidere este email.";
-    $mail->send();
+        $mail->setFrom('testeprojeto40@gmail.com','INFINITY NET');  //Usuario SMTP e Nome aleatório
+        $mail->addAddress($email);     //Email do Destinatario
+        $mail->isHTML(true);                                  //Habilitando o uso do HTML
+        $mail->charset = 'UTF-8';
+        $mail->Subject = "Redefinir Senha";    //Titulo
+        $mail->Body    = "Olá!<br><br>Caso queira redefinir sua senha, <a href='http://localhost/recuperando.html?email=$email' target='_blank'>Clique aqui!</a><br><br>Caso não queira, desconsidere este email.";
+        $mail->AltBody =  "Olá!<br><br>Caso queira redefinir sua senha, <a href='http://localhost/recuperando.html?email=$email' target='_blank'>Clique aqui!</a><br><br>Caso não queira, desconsidere este email.";
+        $mail->send();
     header('refresh:2;url=recuperar.html');
 
     }catch (Exception $e){
@@ -73,18 +73,4 @@ if($result->num_rows > 0){
     echo 'Email não existe!';
     mysqli_close($sql);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>

@@ -32,7 +32,7 @@ try {
     $mail->Host       = 'smtp.gmail.com';                     //Servidor usado
     $mail->SMTPAuth   = true;                                   //Ativando autenticacao SMTP
     $mail->Username   = 'testeprojeto40@gmail.com';                     //Usuario SMTP
-    $mail->Password   = 'mzacqpqnulwnuyrr';                               //Senha SMTP     
+    $mail->Password   = '';                               //Senha SMTP     
     $mail->Port       = 587;        //Porta usada para TLS
 
     //Aqui ele tira o erro do SSL e da conexão com o Host
@@ -46,7 +46,7 @@ try {
     
     //quem envia e recebe
     $mail->setFrom($email,$nome);  //Usuario SMTP e Nome aleatório
-    $mail->addAddress('testeprojeto40@gmail.com');     //Email do Destinatario
+    $mail->addAddress('testeprojeto40@gmail.com','INFINITY NET');     //Email do Destinatario
     $mail->isHTML(true);                                  //Habilitando o uso do HTML
     $mail->charset = 'UTF-8';
     $mail->Subject = "SUPORTE $email";    //Titulo
